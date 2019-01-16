@@ -1,0 +1,26 @@
+{
+  "name": "firebase-database",
+  "version": "1.0.0",
+  "description": "Quickstart for Firebase Realtime Database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soundparticle/firebase-database.git"
+  },
+  "author": "Antreo Pukay c/o Firebase",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soundparticle/firebase-database/issues"
+  },
+  "homepage": "https://github.com/soundparticle/firebase-database#readme",
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "firebase-admin": "^4.0.3",
+    "node-schedule": "^1.1.0",
+    "nodemailer": "^2.4.1",
+    "promise": "^7.1.1"
+  }
+}
