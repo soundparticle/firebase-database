@@ -1,7 +1,8 @@
 'use strict';
 
 //[START imports]
-var firebase = require('firebase-admin');
+import * as admin from 'firebase-admin';
+// var firebase = require('firebase-admin');
 // [END impprts]
 var nodemailer = require('nodemailer');
 var schedule = require('node-schedule');
