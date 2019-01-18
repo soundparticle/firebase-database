@@ -22,7 +22,7 @@ var serviceAccount = require('path/to/serviceAccountKey.json');
 
 firebase.initializeApp({
   credential: firebase.credential.cert(serviceAccount),
-  databaseURL: 'https://<PROJECT_ID>.firebaseio.com'
+  databaseURL: 'https://fir-practice-78bdf.firebaseio.com'
 });
 // [END initialize]
 
