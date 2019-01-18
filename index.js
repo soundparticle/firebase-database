@@ -20,7 +20,7 @@ var mailTransport = nodemailer.createTransport('smtps://<user>%40gmail.com:<pass
 // Initialize the app with a service account, granting admin privileges
 var serviceAccount = require('path/to/serviceAccountKey.json');
 
-firebase.initializeApp({
+admin.initializeApp({
   credential: firebase.credential.cert(serviceAccount),
   databaseURL: 'https://fir-practice-78bdf.firebaseio.com'
 });
