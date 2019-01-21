@@ -17,12 +17,20 @@ var mailTransport = nodemailer.createTransport('smtps://<user>%40gmail.com:<pass
 
 // TODO(DEVELOPER): Change the two placeholders below.
 // [START initialize]
-// Initialize the app with a service account, granting admin privileges
+// Initialize the app with a service account by fetching JSON file, granting admin privileges
 var serviceAccount = require('./fir-practice-78bdf-firebase-adminsdk-veyif-d591518203');
 
+// Initialize the app with a service account, granting admin privileges
 admin.initializeApp({
-  credential: firebase.credential.cert(serviceAccount),
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://fir-practice-78bdf.firebaseio.com'
+});
+
+// As an admin, the app has access to read and write all data, regardless of Security Rules
+var db = admin.database();
+var ref = db.ref("restricted_access/secret_document");
+ref.once("value", function(snapshot) {
+  console.log(snapshot.val());
 });
 // [END initialize]
 
