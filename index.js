@@ -18,7 +18,7 @@ var mailTransport = nodemailer.createTransport('smtps://<user>%40gmail.com:<pass
 // TODO(DEVELOPER): Change the two placeholders below.
 // [START initialize]
 // Initialize the app with a service account by fetching JSON file, granting admin privileges
-var serviceAccount = require('./fir-practice-78bdf-firebase-adminsdk-veyif-d591518203');
+var serviceAccount = require('../../../../antreopukay/Documents/FIREBASE:FIRESTORE/fir-practice-78bdf-firebase-adminsdk-veyif-d591518203.json');
 
 // Initialize the app with a service account, granting admin privileges
 admin.initializeApp({
