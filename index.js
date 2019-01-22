@@ -23,13 +23,17 @@ var serviceAccount = require('../../../../antreopukay/Documents/FIREBASE:FIRESTO
 // Initialize the app with a service account, granting admin privileges
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://fir-practice-78bdf.firebaseio.com'
+  databaseURL: 'https://fir-practice-78bdf.firebaseio.com',
+  //  uid set to uid identifier used in security rules in dashboard of Firebase
+  databaseAuthVariableOverride: {
+    uid: 'auth.uid'
+  }
 });
 
 // As an admin, the app has access to read and write all data, regardless of Security Rules
 var db = admin.database();
-var ref = db.ref("restricted_access/secret_document");
-ref.once("value", function(snapshot) {
+var ref = db.ref('restricted_access/secret_document');
+ref.once('value', function(snapshot) {
   console.log(snapshot.val());
 });
 // [END initialize]
